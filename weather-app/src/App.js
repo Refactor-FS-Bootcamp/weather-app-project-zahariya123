@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Content from "./components/content";
+import Header from "./components/header";
+import Sidebar from "./components/sider";
+import {  Route, Routes,BrowserRouter } from "react-router-dom";
+import "./index.css";
+import City from "./pages/city";
+import Home from "./pages/home";
 
-function App() {
+export default function App() {
+  const sidebarTab = [
+    {
+      tab: "Home"
+    },
+    {
+      tab: "City"
+    },
+    
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Sidebar sidebarTab={sidebarTab}/>
+     <Content/>
+     <Header heading={"My Favorite Cities"}/>
+     <BrowserRouter>
+   <Routes>
+      <Route path="/" element={<Home />}>
+        
+     </Route>
+     <Route path="/city" element={<City />}>
+        
+     </Route></Routes>
+     </BrowserRouter>
     </div>
   );
 }
-
-export default App;
