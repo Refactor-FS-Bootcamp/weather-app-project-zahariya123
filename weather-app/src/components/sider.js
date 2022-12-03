@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const Sider = (props) => {
   const { sidebarTab } = props;
   const navigate = useNavigate();
@@ -11,9 +12,12 @@ const Sider = (props) => {
     setSelectedTab(tab)
     if (tab === "Home") {
       console.log("home");
+
+
       navigate("/");
     
     } else if (tab === "City") {
+ 
       console.log("Cities");
       navigate("/city",
       {state:

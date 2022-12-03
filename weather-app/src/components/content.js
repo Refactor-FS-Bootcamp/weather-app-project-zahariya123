@@ -2,8 +2,8 @@ const Content = (props) => {
 
 
   return (
-    <div>
-     
+    <div className="main-content">
+     You have not selected any city yet!
     </div>
   );
 };

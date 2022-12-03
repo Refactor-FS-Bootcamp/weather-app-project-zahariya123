@@ -1,7 +1,10 @@
-const Home= () =>{
-    return(
-        <div><span>You have not selected any city as favorite yet!</span></div>
-    )
-}
+import Header from "../components/header"
+const Home = () => {
+    return (
+    <>     
+      <Header heading={"My Favorite cities"}/>     
+    </>
+  );
+};
 
 export default Home;

@@ -8,7 +8,7 @@ import Home from "../Pages/home";
 export default function AppRoute() {
  
   return (
-    <div className="App">
+    < >
    
    <Routes>
       <Route path="/" element={<CustomLayout><Home /></CustomLayout>}>
@@ -18,6 +18,6 @@ export default function AppRoute() {
         
      </Route></Routes>
      
-    </div>
+    </>
   );
 }

@@ -1,11 +1,18 @@
-import { useLocation } from "react-router-dom";
+import '../index.css'
 
-const City = () =>{
-    const { state } = useLocation()
-    console.log(state)
+
+const City = ()=>{
     return(
-        
-        <div><span>{state?.sample}</span></div>
+        <div className="city-content">
+            <div className='city-header'>
+                <h2>Cities</h2>
+                <button className="icon" onClick={()=>console.log('button is clicked')}>&#43;</button>
+            </div>
+            <hr />
+            <div className='info-text'>
+                <p>You haven't selected any city</p>
+            </div>
+        </div>
     )
 }
 
