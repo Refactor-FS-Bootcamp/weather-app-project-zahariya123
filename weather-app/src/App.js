@@ -1,7 +1,7 @@
 
 import Sider from "./components/sider";
 import "./index.css";
-
+import { ApplicationContextProvider } from "./context/application-context";
 import AppRoute from "./Routes/app-routes";
 
 export default function App() {
@@ -17,10 +17,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <Sider  sidebarTab={sidebarTab}/>
+    <Sider  sidebarTab={sidebarTab}/>
    <div className="dashboard">
-
+   <ApplicationContextProvider>
    <AppRoute/>
+   </ApplicationContextProvider>
    </div>
      
     </div>
